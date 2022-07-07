@@ -27,3 +27,12 @@ link tham khảo (https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/
 - flex: <number> - có thể viết gộp flex-basis, flex-frow và flex-shrink
 - oder: <number> - Quyết định flex item hiển thị cái nào trước cái nào sau
 - flex-flow: viết gộp của flex-direction và flex-wrap
+
+
+
+
+
+-----game luyện flexbox------
+    1. https://codingfantasy.com/games/flexboxadventure/play
+    2. https://flexboxfroggy.com/
+    3. http://www.flexboxdefense.com/
