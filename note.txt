@@ -1,0 +1,29 @@
+link tham khảo (https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- Gồm 2 phần chính là: flex container và flex item.
+    + flex container: là thẻ chứa.
+    + flex item: là thẻ con trực tiếp của thẻ chứa flex container.
+        . main size: là kích thước của flex item có chiều song song cới main axis.
+        . cross size: là kích thước của flex item có chiều song song cới cross axis.
+- Gồm 2 trục: main axis( trục chính ) và cross axis ( trục luôn vuông góc với trục main axis).
+    + main axis: điêm đầu( main start) và điểm cuối (main end), quyết định cái hướng flex item được nằm, main start và main end quyết định cái item sẽ được hiển thị lần lượt theo hướng nào.
+    + cross axis: điêm đầu( cross start) và điểm cuối (cross end), đảm nhiệm việc cho cái item hiển thị trong trường hợp có nhiều hàng.
+
+
+            -------- Các thuộc tính CSS sử dụng trong Flexbox --------
+- display: flex | inline flex - Quyết định xem có sử dụng layout Flexbox hay không.
+- flex-direction: row | colum - Giúp thay đổi được phương hướng của main axis (khi sử dụng display: flex thì mặc định flex-direction: row thì thằng main axis sẽ nằm ngang và ngược lại flex-direction: colum thì main axis nằm dọc)
+    + row: nằm ngang
+    + colum: nằm dọc
+- flex-wrap: nowarp | wrap  | wrap-reverse - Có giá trị mặc định là nowarp
+    + wrap: xuống dòng
+    + wrap-reverse: nhảy lên trên
+- flex-basis: <length> - Để xét kích thước cho main size
+- justify-content: flex-start | flex-end | center | space-between | space-around - Giúp căn flex item cùng phương hướng với main axis theo hướng left, right, center, top, bottom (Dùng cho thẻ cha)
+- justify-self: flex-start | flex-end | center -  Dùng cho thẻ con
+- align-content: flex-start | flex-end | center - giống như justify-content khác ở chỗ là cùng phương hướng với cross-size
+- align-self: flex-start | flex-end | center - Dùng cho thẻ con
+- flex-frow: <number> - Giúp thay đổi kích thước của main size ( giúp cho lớn lên )
+- flex-shrink: <number> - ngược lại flex-frow (giúp cho nhỏ lại )
+- flex: <number> - có thể viết gộp flex-basis, flex-frow và flex-shrink
+- oder: <number> - Quyết định flex item hiển thị cái nào trước cái nào sau
+- flex-flow: viết gộp của flex-direction và flex-wrap
