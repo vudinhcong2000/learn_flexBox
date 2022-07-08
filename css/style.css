@@ -19,8 +19,23 @@ body {
   min-height: 42px;
   background-color: #ef5122;
   display: flex;
+  /*
+    Ngoài cách này, các bạn có thể
+    sử dụng 1 trong 2 cách mình
+    comment phía dưới
+  */
   justify-content: space-between;
 }
+
+/* Cách này */
+/* .nav-list:nth-child(1) {
+margin-right: auto;
+} */
+
+/* Hoặc cách này */
+/* .nav-list:nth-child(2) {
+margin-left: auto;
+} */
 
 .nav-list {
   padding-left: 0;
@@ -69,17 +84,14 @@ body {
 
 .sidebar-one {
   flex: 1;
-  order: 1;
 }
 
 .sidebar-two {
   flex: 1;
-  order: 2;
 }
 
 .main-column {
   flex: 3;
-  order: 3;
 }
 
 /* Feature layout */
@@ -122,7 +134,7 @@ body {
   padding: 12px 0 32px 0;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
 .wrap-layout__item {
@@ -150,6 +162,16 @@ body {
 .center-layout__item {
   font-size: 42px;
   font-weight: 700;
+  /*
+    Cũng có cách khác là các bạn
+    thêm 2 thuộc tính vào flex-container:
+    justify-content: center;
+    align-item: center;
+
+    cũng cho kết quả tương tự,
+    nhưng cách margin: auto này
+    ngắn gọn hơn
+  */
   margin: auto;
 }
 
@@ -160,11 +182,11 @@ body {
   height: 320px;
   background-color: #fff;
   display: flex;
-  align-items: flex-end;
   justify-content: space-around;
 }
 
 .chart-layout__item {
+  align-self: flex-end;
   width: 60px;
   color: #fff;
   text-align: center;
@@ -174,7 +196,7 @@ body {
 }
 
 @keyframes growth {
-  form {
+  from {
     opacity: 0;
     height: calc(var(--percent) - 50%);
   }
@@ -191,6 +213,7 @@ body {
   max-width: 740px;
   min-height: 360px;
   display: flex;
+  flex-direction: row;
 }
 
 .the-end__first {
@@ -212,6 +235,7 @@ body {
 }
 
 .the-end__second-two {
+  flex: 1;
   padding: 4px 16px;
   background-color: rgb(192, 210, 227);
 }
